@@ -76,8 +76,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displayQuotesPager(quotes: List<Quote>, isNameOn: Boolean) {
-        val quotesPagerAdaptor = QuotesPagerAdaptor(quotes, isNameOn)
-        viewPager.adapter = quotesPagerAdaptor
+        viewPager.adapter = QuotesPagerAdaptor(quotes, isNameOn)
         val startingPoint: Int = quotes.size * 10000
         viewPager.setCurrentItem(startingPoint, false)
     }
